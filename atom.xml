@@ -4,7 +4,7 @@
   <title><![CDATA[周大婶的技术博客]]></title>
   <link href="http://ben46.github.io/atom.xml" rel="self"/>
   <link href="http://ben46.github.io/"/>
-  <updated>2013-08-02T08:33:19+08:00</updated>
+  <updated>2013-08-02T20:10:08+08:00</updated>
   <id>http://ben46.github.io/</id>
   <author>
     <name><![CDATA[周大婶]]></name>
@@ -12,6 +12,98 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Xcode设置删除行的快捷键]]></title>
+    <link href="http://ben46.github.io/blog/2013/08/02/xcodeshe-zhi-shan-chu-xing-de-kuai-jie-jian/"/>
+    <updated>2013-08-02T20:06:00+08:00</updated>
+    <id>http://ben46.github.io/blog/2013/08/02/xcodeshe-zhi-shan-chu-xing-de-kuai-jie-jian</id>
+    <content type="html"><![CDATA[<p><a href="http://stackoverflow.com/questions/551383/xcode-duplicate-delete-line">参考在这里</a>
+如果你用的是preview版本的xcode, 记得修改路径</p>
+
+<pre><code>sudo chmod 666 /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Resources/IDETextKeyBindingSet.plist
+sudo chmod 777 /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Resources/
+open /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Resources/IDETextKeyBindingSet.plist
+</code></pre>
+
+<p>add</p>
+
+<pre><code>deleteToBeginningOfLine:, moveToEndOfLine:, deleteToBeginningOfLine:, deleteBackward:, moveDown:, moveToBeginningOfLine:
+</code></pre>
+
+<p>Restart Xcode and open Xcode > Preferences > KeyBindings. Find your macro and define a shortkey :</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[未越狱ios设备的抓包方法]]></title>
+    <link href="http://ben46.github.io/blog/2013/08/02/wei-yue-yu-iosshe-bei-de-zhua-bao-fang-fa/"/>
+    <updated>2013-08-02T19:52:00+08:00</updated>
+    <id>http://ben46.github.io/blog/2013/08/02/wei-yue-yu-iosshe-bei-de-zhua-bao-fang-fa</id>
+    <content type="html"><![CDATA[<h2>安装端口</h2>
+
+<p><a href="http://fanliugen.com/?p=351">参考文献</a></p>
+
+<p>打印现在所有的端口</p>
+
+<pre><code>ifconfig -l
+</code></pre>
+
+<p>输出</p>
+
+<pre><code>lo0 gif0 stf0 en0 en1 p2p0 fw0 ppp0 utun0
+</code></pre>
+
+<p>绑定设备的UDID, 可以从organizer中获取</p>
+
+<pre><code>rvictl -s 74bd53c647548234ddcef0ee3abee616005051ed
+</code></pre>
+
+<p>输出</p>
+
+<pre><code>Starting device 74bd53c647548234ddcef0ee3abee616005051ed [SUCCEEDED]
+network interface, rvi0, added by the previous command.
+</code></pre>
+
+<p>再次打印所有端口</p>
+
+<pre><code>ifconfig -l
+lo0 gif0 stf0 en0 en1 p2p0 fw0 ppp0 utun0 rvi0
+</code></pre>
+
+<h2>开始抓包</h2>
+
+<p>到这里端口安装成功了, 接下来就要抓包了~~</p>
+
+<pre><code>sudo tcpdump -i rvi0 -n -s 0 -w dump.pcap tcp
+</code></pre>
+
+<p>如果你的终端在你的根目录下面, 那在根目录下就会出现一个dump.pcap,
+这个文件可以用WireShark打开</p>
+
+<h2>过滤不需要的ip</h2>
+
+<p><a href="http://netsecurity.51cto.com/art/201111/304449.htm">ip过滤</a></p>
+
+<pre><code>ip.src==192.168.0.105 or ip.dst==119.147.74.18
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[安装UI7Kit]]></title>
+    <link href="http://ben46.github.io/blog/2013/08/02/an-zhuang-ui7kit/"/>
+    <updated>2013-08-02T19:49:00+08:00</updated>
+    <id>http://ben46.github.io/blog/2013/08/02/an-zhuang-ui7kit</id>
+    <content type="html"><![CDATA[<p>今天安装UI7kit的时候遇到一个问题:</p>
+
+<pre><code>[!] The target `RumourGuard [Debug]` overrides the `HEADER_SEARCH_PATHS` build setting defined in `Pods/Pods.xcconfig'.
+</code></pre>
+
+<p>解决办法:
+在 HEADER_SEARCH_PATHS里面加入{inherit}</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[如何用github page搭建自己的技术博客]]></title>
