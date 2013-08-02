@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[周大婶的技术博客]]></title>
   <link href="http://ben46.github.io/atom.xml" rel="self"/>
   <link href="http://ben46.github.io/"/>
-  <updated>2013-08-02T07:54:48+08:00</updated>
+  <updated>2013-08-02T08:33:19+08:00</updated>
   <id>http://ben46.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[周大婶]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -18,7 +18,14 @@
     <link href="http://ben46.github.io/blog/2013/08/01/ru-he-yong-github-pageda-jian-zi-ji-de-ji-zhu-bo-ke/"/>
     <updated>2013-08-01T22:01:00+08:00</updated>
     <id>http://ben46.github.io/blog/2013/08/01/ru-he-yong-github-pageda-jian-zi-ji-de-ji-zhu-bo-ke</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>我参考的网站[唐巧的博客][<a href="http://blog.devtang.com/blog/2012/02/10/setup-blog-based-on-github/">http://blog.devtang.com/blog/2012/02/10/setup-blog-based-on-github/</a>][<a href="http://beiyuu.com/github-pages/">http://beiyuu.com/github-pages/</a>]</p>
+
+<p>最重要的是我一直以为我自己配置错了, 还是安装的库不对, 其实我不应该传octopress整个到仓库, 应该先</p>
+
+<pre><code>sudo rake deploy
+</code></pre>
+
+<p>然后传_deploy这个文件夹. 就行了</p>
 ]]></content>
   </entry>
   
