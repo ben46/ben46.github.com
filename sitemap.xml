@@ -1,14 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://ben46.github.io/blog/2013/08/01/title/</loc>
-        <lastmod>2013-08-01T21:55:30+08:00</lastmod>
-    </url>
-    <url>
         <loc>
             http://ben46.github.io/blog/2013/08/01/ru-he-yong-github-pageda-jian-zi-ji-de-ji-zhu-bo-ke/
         </loc>
-        <lastmod>2013-08-02T08:29:54+08:00</lastmod>
+        <lastmod>2013-08-03T02:40:45+08:00</lastmod>
     </url>
     <url>
         <loc>http://ben46.github.io/blog/2013/08/02/an-zhuang-ui7kit/</loc>
@@ -28,11 +24,11 @@
     </url>
     <url>
         <loc>http://ben46.github.io/blog/archives/</loc>
-        <lastmod>2013-08-02T20:10:07+08:00</lastmod>
+        <lastmod>2013-08-03T02:40:45+08:00</lastmod>
     </url>
     <url>
         <loc>http://ben46.github.io/</loc>
-        <lastmod>2013-08-02T20:10:07+08:00</lastmod>
+        <lastmod>2013-08-03T02:40:45+08:00</lastmod>
     </url>
     <url>
         <loc>http://ben46.github.io/robots.txt</loc>
