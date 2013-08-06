@@ -4,7 +4,7 @@
   <title><![CDATA[周大婶的技术博客]]></title>
   <link href="http://ben46.github.io/atom.xml" rel="self"/>
   <link href="http://ben46.github.io/"/>
-  <updated>2013-08-03T02:41:23+08:00</updated>
+  <updated>2013-08-06T20:27:30+08:00</updated>
   <id>http://ben46.github.io/</id>
   <author>
     <name><![CDATA[周大婶]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[怎么部署node.js工程到bae]]></title>
+    <link href="http://ben46.github.io/blog/2013/08/06/zen-yao-bu-shu-node-dot-jsgong-cheng-dao-bae/"/>
+    <updated>2013-08-06T20:26:00+08:00</updated>
+    <id>http://ben46.github.io/blog/2013/08/06/zen-yao-bu-shu-node-dot-jsgong-cheng-dao-bae</id>
+    <content type="html"><![CDATA[<p>记得如果用fs.readFile来读取文件的话, 要调用多一层文件夹</p>
+
+<pre><code>fs.readFile('./app/json/hotel.list.json', "utf8", function (err, data) {
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Xcode设置删除行的快捷键]]></title>
